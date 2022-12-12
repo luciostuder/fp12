@@ -65,7 +65,7 @@ fun converteParaString(matriz: Array<Array<String>>): String {
     var result = ""
     for (arr in matriz) {
         var linha = ""
-        for(str in arr) {
+        for (str in arr) {
             linha += "$str,"
         }
         linha = linha.substring(0, linha.length - 1) // tirar a ultima virgula
