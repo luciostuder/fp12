@@ -18,21 +18,21 @@ class TestTeacherFicha {
 
 
     @Test(timeout = 500)
-    fun test_02_duplica() {
+    fun test_02_copiaMatriz() {
         val expected1 = arrayOf(arrayOf(1))
-        val actual1 = duplica(expected1)
+        val actual1 = copiaMatriz(expected1)
         assertNotEquals(expected1, actual1, "Estás a devolver o mesmo array!")
-        Assert.assertArrayEquals("Não duplicaste bem o array!", expected1, actual1)
+        Assert.assertArrayEquals("Não copiaste bem o array!", expected1, actual1)
 
         val expected2 = arrayOf(arrayOf(1), arrayOf(3), arrayOf(42))
-        val actual2 = duplica(expected1)
+        val actual2 = copiaMatriz(expected2)
         assertNotEquals(expected1, actual2, "Estás a devolver o mesmo array!")
-        Assert.assertArrayEquals("Não duplicaste bem o array!", expected1, actual2)
+        Assert.assertArrayEquals("Não copiaste bem o array!", expected2, actual2)
 
         val expected3 = arrayOf(arrayOf(1999, 2), arrayOf(3, 4), arrayOf(99, 42))
-        val actual3 = duplica(expected1)
+        val actual3 = copiaMatriz(expected3)
         assertNotEquals(expected1, actual3, "Estás a devolver o mesmo array!")
-        Assert.assertArrayEquals("Não duplicaste bem o array!", expected1, actual3)
+        Assert.assertArrayEquals("Não copiaste bem o array!", expected3, actual3)
     }
 
 

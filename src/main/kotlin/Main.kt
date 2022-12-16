@@ -1,5 +1,5 @@
 fun main() {
-    val numeros = duplica(arrayOf(arrayOf(2, 5), arrayOf(99), arrayOf(3, 4)))
+    val numeros = copiaMatriz(arrayOf(arrayOf(2, 5), arrayOf(99), arrayOf(3, 4)))
 
     println(numeros.contentDeepToString())
 
@@ -21,9 +21,8 @@ fun getArray2DDeInteiros(): Array<Array<Int>> {
 }
 
 
-fun duplica(matriz: Array<Array<Int>>): Array<Array<Int>> {
+fun copiaMatriz(matriz: Array<Array<Int>>): Array<Array<Int>> {
     val result = Array(matriz.size) { Array(1) { 0 } } // initial dummy array of array
-
     for (linha in matriz.indices) {
         result[linha] = Array(matriz[linha].size) { 0 }
         for (coluna in 0 until matriz[linha].size) {
